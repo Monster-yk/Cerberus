@@ -1,0 +1,7 @@
+pre-commit:
+  commands:
+    fmt:
+      glob: "*.go"
+      run: test -z "$(gofmt -l .)"
+    lint:
+      run: golangci-lint run

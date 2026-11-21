@@ -1,5 +1,45 @@
+# Project documentation
 architecture.svg
 CERBERUS_DEEPDIVE.md
 Go_React resume project roadmap - Claude(r).pdf
 Go_React resume project roadmap - Claude.pdf
 ROADMAP.md
+
+# Go build output
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+coverage output
+cover.out
+coverage.out
+coverage.html
+
+# Go workspace and dependency files
+/vendor/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Test and
+# Editors and IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
