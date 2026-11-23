@@ -1,0 +1,1 @@
+- [ADR 0001: Modular monorepo](docs/adr/0001-modular-monorepo.md)
