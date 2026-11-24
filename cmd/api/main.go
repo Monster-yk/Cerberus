@@ -2,7 +2,9 @@
 package main
 
 import (
+	"log"
 	"net/http"
+	"os"
 
 	"github.com/go-chi/chi/v5"
 
@@ -10,7 +12,10 @@ import (
 )
 
 func main() {
+	logger := log.New(os.Stdout, "", log.LstdFlags)
 	r := chi.NewRouter()
+
+	r.Use(httpx.RequestLogger(logger))
 
 	r.Route("/v1", func(r chi.Router) {
 		r.Get("/repositories", listRepositories)
