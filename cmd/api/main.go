@@ -16,6 +16,8 @@ func main() {
 	r := chi.NewRouter()
 
 	r.Use(httpx.RequestLogger(logger))
+	r.Use(httpx.Recoverer(logger))
+	r.Use(httpx.RequestID)
 
 	r.Route("/v1", func(r chi.Router) {
 		r.Get("/repositories", listRepositories)
